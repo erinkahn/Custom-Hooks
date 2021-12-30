@@ -1,3 +1,5 @@
+// ----- hook:
+
 import React, { useState, useEffect } from 'react';
 
 export const useLocalStorage = (key, defaultValue = '') => {
@@ -13,7 +15,8 @@ export const useLocalStorage = (key, defaultValue = '') => {
 }
 
 
-// use this in a component
+// ----- consumer component:
+
 // export default function ComponentName() {
 //     const [name, setName] = useLocalStorage('name')
 
