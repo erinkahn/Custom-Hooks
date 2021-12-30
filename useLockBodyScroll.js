@@ -1,3 +1,5 @@
+// ----- hook:
+
 import { useEffect, useLayoutEffect, useState } from 'react'
 
 export default function useLockBodyScroll() {
@@ -23,7 +25,8 @@ export default function useLockBodyScroll() {
 }
 
 
-// to use it
+
+// ----- component consumer:
 
 // import React, {useState} from 'react';
 // import useLockBodyScroll from '../hooks/useLockBodyScroll';
