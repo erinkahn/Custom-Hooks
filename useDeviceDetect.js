@@ -2,7 +2,7 @@
 
 import {useEffect, useState} from 'react';
 
-export default function useDeviceCheck() {
+export default function useDeviceDetect() {
     const [isMobile, setMobile] = useState(false);
 
     useEffect(() => {
@@ -24,15 +24,15 @@ export default function useDeviceCheck() {
 
 // ----- consumer component:
 
-import React from "react";
-import useDeviceDetect from "../hooks/useDeviceDetect";
+// import React from "react";
+// import useDeviceDetect from "../hooks/useDeviceDetect";
 
-function ComponentName() {
-  const { isMobile } = useDeviceDetect();
+// function ComponentName() {
+//   const { isMobile } = useDeviceDetect();
 
-  return (
-    <>
-      {!isMobile && <StickyHeader {...courseData} />}
-    </>
-  );
-}
+//   return (
+//     <>
+//       {!isMobile && <StickyHeader {...courseData} />}
+//     </>
+//   );
+// }
