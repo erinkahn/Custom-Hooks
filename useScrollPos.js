@@ -1,3 +1,5 @@
+// --- Hook:
+
 import { useLayoutEffect, useState } from "react";
 
 export const useScrollPos = () => {
@@ -27,7 +29,7 @@ export const useScrollPos = () => {
 };
 
 
-// use this in another component:
+// --- Consumer Component:
 
 // import { useScrollPos } from "./useScrollPos";
 
