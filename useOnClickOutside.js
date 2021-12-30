@@ -1,3 +1,5 @@
+// --- hook:
+
 import { useState, useEffect, useRef } from "react";
 
 function useOnClickOutside(ref, handler) {
@@ -27,7 +29,10 @@ function useOnClickOutside(ref, handler) {
   );
 }
 
-// Usage
+
+
+// --- Consumer Component:
+
 // function App() {
 //   // Create a ref that we add to the element for which we want to detect outside clicks
 //   const ref = useRef();
