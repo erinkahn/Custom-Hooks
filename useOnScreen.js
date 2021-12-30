@@ -56,9 +56,6 @@ function useOnScreen(ref, rootMargin = "0px") {
 //             <h1>Hey I'm on the screen</h1>
 //             <img src="https://i.giphy.com/media/ASd0Ukj0y3qMM/giphy.gif" />
 //           </div>
-
-
-
 //         ) : (
 //           <h1>Scroll down 300px from the top of this section 👇</h1>
 //         )}
@@ -66,3 +63,4 @@ function useOnScreen(ref, rootMargin = "0px") {
 //     </div>
 //   );
 // }
+
