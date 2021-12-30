@@ -1,4 +1,5 @@
-// Hook
+// --- hook:
+
 import { useState, useEffect, useRef } from "react";
 
 function useOnScreen(ref, rootMargin = "0px") {
@@ -25,7 +26,9 @@ function useOnScreen(ref, rootMargin = "0px") {
 }
 
 
-// // Usage
+
+// --- Consumer Component:
+
 // function App() {
 
 //   // Ref for the element that we want to detect whether on screen
@@ -53,6 +56,9 @@ function useOnScreen(ref, rootMargin = "0px") {
 //             <h1>Hey I'm on the screen</h1>
 //             <img src="https://i.giphy.com/media/ASd0Ukj0y3qMM/giphy.gif" />
 //           </div>
+
+
+
 //         ) : (
 //           <h1>Scroll down 300px from the top of this section 👇</h1>
 //         )}
