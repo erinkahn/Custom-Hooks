@@ -1,3 +1,5 @@
+// ----- hook:
+
 import {useEffect, useState} from 'react';
 
 export default function useDeviceCheck() {
@@ -16,4 +18,21 @@ export default function useDeviceCheck() {
     }, []);
 
     return { isMobile };
+}
+
+
+
+// ----- consumer component:
+
+import React from "react";
+import useDeviceDetect from "../hooks/useDeviceDetect";
+
+function ComponentName() {
+  const { isMobile } = useDeviceDetect();
+
+  return (
+    <>
+      {!isMobile && <StickyHeader {...courseData} />}
+    </>
+  );
 }
