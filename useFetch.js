@@ -1,4 +1,5 @@
 // ----- hook
+
 import {useState, useEffect} from 'react';
 
 export default function useFetch(url, options) {
@@ -24,6 +25,7 @@ export default function useFetch(url, options) {
 
 
 // ---- consumer component
+
 import useFetch from '../hooks/useFetch';
 
 const FetchData = (props) => {
@@ -44,7 +46,6 @@ const FetchData = (props) => {
 
 
 
-
 // --- or another way
 
 
@@ -53,6 +54,7 @@ const FetchData = (props) => {
 
 
 // ---- hook
+
 import { useState, useEffect } from "react";
 
 const useFetch = (url) => {
@@ -72,6 +74,7 @@ export default useFetch;
 
 
 // ---- consumer component
+
 import useFetch from "./useFetch";
 
 const Home = () => {
