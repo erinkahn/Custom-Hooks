@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 
-function useOnClickOutside(ref, handler) {
+function useClickOutside(ref, handler) {
   
   useEffect(
     () => {
@@ -40,7 +40,7 @@ function useOnClickOutside(ref, handler) {
 //   // State for our modal
 //   const [isModalOpen, setModalOpen] = useState(false);
 //   // Call hook passing in the ref and a function to call on outside click
-//   useOnClickOutside(ref, () => setModalOpen(false));
+//   useClickOutside(ref, () => setModalOpen(false));
 //   return (
 //     <div>
 //       {isModalOpen ? (
