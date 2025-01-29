@@ -3,23 +3,27 @@
 import {useState, useEffect} from 'react';
 
 export default function useFetch(url, options) {
-    const [response, setResponse] = useState(null);
+    const [data, setData] = useState(null);
+    const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
     useEffect(() => {
         const fetchData = async () => {
+            setLoading(true);
             try {
-                const resp = await fetch(url, options);
-                const json = await resp.json();
-                setResponse(json);
+                const response= await fetch(url);
+                const result = await response.json();
+                setData(result);
             } catch(error) {
                 setError(error);
+            } finally {
+                setLoading(false);
             }
         };
         fetchData();
-    }, []);
+    }, [url]);
 
-    return {response, error};
+    return {data, loading, error};
 }
 
 
@@ -29,17 +33,14 @@ export default function useFetch(url, options) {
 import useFetch from '../hooks/useFetch';
 
 const FetchData = (props) => {
-    const resp = useFetch('https://urlgoeshere', {});
+    const {data, loading, error} = useFetch('https://urlgoeshere', {});
 
-    if (!resp.response) {
-        return <div>Loading...</div>;
-    }
+    if (loading) return <p>Loading...</p>;
+    if (error) return <p>Error: {error.message}</p>;
 
     const thing = resp.response.name;
     return (
-        <div>
-            {thing}
-        </div>
+       <ul>{data?.map(thing => <li key={thing.id}>{thing.name}</li>)}</ul>
     )
 }
 
